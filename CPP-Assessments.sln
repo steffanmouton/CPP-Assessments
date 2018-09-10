@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP-Assessments", "CPP-Assessments\CPP-Assessments.vcxproj", "{374D3911-9D12-4FFB-8633-3DC27BECE62A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessingGame", "NumberGuessingGame\NumberGuessingGame.vcxproj", "{442930E1-59AC-485D-B0F2-F5D9098A98DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{374D3911-9D12-4FFB-8633-3DC27BECE62A}.Release|x64.Build.0 = Release|x64
 		{374D3911-9D12-4FFB-8633-3DC27BECE62A}.Release|x86.ActiveCfg = Release|Win32
 		{374D3911-9D12-4FFB-8633-3DC27BECE62A}.Release|x86.Build.0 = Release|Win32
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Debug|x64.ActiveCfg = Debug|x64
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Debug|x64.Build.0 = Debug|x64
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Debug|x86.Build.0 = Debug|Win32
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Release|x64.ActiveCfg = Release|x64
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Release|x64.Build.0 = Release|x64
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Release|x86.ActiveCfg = Release|Win32
+		{442930E1-59AC-485D-B0F2-F5D9098A98DD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,34 +1,32 @@
 #include <iostream>
 #include <time.h>
 
-
 int main()
 {
 	// Initialize turn counter and grid
-	int turn = 1;
-	int turnCount = 0;
+	char token = 'X';
 	int row;
 	int column;
-	char victory = ' ';
-	int xCount = 0;
-	int oCount = 0;
+	bool victory = false;
+	int turn = 0;
+	
 
 	char play[3][3] = { { ' ', ' ', ' ' },{ ' ', ' ', ' ' },{ ' ', ' ', ' ' } };
 
 	//Game runs while there is no winner or until a draw
-	while (victory != 'X' || victory != 'O' || turnCount != 9)
+	do 
 	{
-		if (turn == 1)
-		{
-			//Player 1 instructions and input
-			std::cout << "Player 1, you are 'X', choose where to place by entering two values. The first (0-2) determines the row, the second (0-2) determines the column.";
+			//turn counter
+			
+		
+			//Player instructions and input
+			std::cout << "Player " << token << " choose where to place by entering two values. The first (0-2) determines the row, the second (0-2) determines the column.";
 			std::cin >> row >> column;
 
 			if (play[row][column] == ' ')
 			{
-				play[row][column] = 'X';
+				play[row][column] = token;
 				turn++;
-				turnCount++;
 			}
 			else
 			{
@@ -79,181 +77,72 @@ int main()
 			//Horizontal Victory
 			for (int i = 0; i<3; i++)
 			{
-				for (int j = 0; j<3; j++)
+				if (play[i][0] != ' ')
 				{
-					if (play[i][j] == 'X')
+					if (play[i][0] == play[i][1] && play[i][0] == play[i][2])
 					{
-						xCount++;
+						victory = true;
+						break;
+					}
+					else
+					{
+						continue;
 					}
 				}
-
-				if (xCount == 3)
-				{
-					victory = 'X';
-					break;
-				}
-				else
-				{
-					xCount = 0;
-				}
-
 
 			}
 			//Vertical Victory
-			for (int i = 0; i<3; i++)
+			for (int i = 0; i < 3; i++)
 			{
-				for (int j = 0; j<3; j++)
+				if (play[0][i] != ' ')
 				{
-					if (play[j][i] == 'X')
+					if (play[0][i] == play[1][i] && play[0][i] == play[2][i])
 					{
-						xCount++;
+						victory = true;
+						break;
+					}
+					else
+					{
+						continue;
 					}
 				}
-
-				if (xCount == 3)
-				{
-					victory = 'X';
-					break;
-				}
-				else
-				{
-					xCount = 0;
-				}
-
 			}
 
 			//Diagonal Victory
-			if (play[0][0] == 'X' && play[1][1] == 'X' && play[2][2] == 'X')
-			{
-				victory = 'X';
-				break;
-			}
-			if (play[2][0] == 'X' && play[1][1] == 'X' && play[0][2] == 'X')
-			{
-				victory = 'X';
-				break;
-			}
-		}
 
-		if (turn == 2)
-		{
-			//Player 2 instructions and input
-			std::cout << "Player 2, you are 'O', choose where to place by entering two values. The first (0-2) determines the row, the second (0-2) determines the column.";
-			std::cin >> row >> column;
-
-			if (play[row][column] == ' ')
+			if (play[0][0] == play[1][1] && play[0][0] == play[2][2])
 			{
-				play[row][column] = 'O';
-				turn--;
-				turnCount++;
-			}
-			else
-			{
-				std::cout << "That is not a valid location. Please choose another!\n";
-				continue;
-			}
-
-			//Display Board
-			for (int i = 0; i<3; i++)
-			{
-				if (i<2)
+				if (play[0][0] != ' ')
 				{
-					std::cout << play[0][i] << "|";
-				}
-				if (i == 2)
-				{
-					std::cout << play[0][i] << std::endl;
-				}
-			}
-			std::cout << "------\n";
-
-			for (int i = 0; i<3; i++)
-			{
-				if (i<2)
-				{
-					std::cout << play[1][i] << "|";
-				}
-				if (i == 2)
-				{
-					std::cout << play[1][i] << std::endl;
-				}
-			}
-			std::cout << "------\n";
-
-			for (int i = 0; i<3; i++)
-			{
-				if (i<2)
-				{
-					std::cout << play[2][i] << "|";
-				}
-				if (i == 2)
-				{
-					std::cout << play[2][i] << std::endl;
-				}
-			}
-
-			//Check for Victory
-			//Horizontal Victory
-			for (int i = 0; i<3; i++)
-			{
-				for (int j = 0; j<3; j++)
-				{
-					if (play[i][j] == 'O')
-					{
-						oCount++;
-					}
-				}
-
-				if (xCount == 3)
-				{
-					victory = 'O';
+					victory = true;
 					break;
 				}
-				else
-				{
-					oCount = 0;
-				}
-
-
 			}
-			//Vertical Victory
-			for (int i = 0; i<3; i++)
+			if (play[2][0] == play[1][1] && play[2][0] == play[0][2])
 			{
-				for (int j = 0; j<3; j++)
+				if (play[2][0] != ' ')
 				{
-					if (play[j][i] == 'O')
-					{
-						oCount++;
-					}
-				}
-
-				if (oCount == 3)
-				{
-					victory = 'O';
+					victory = true;
 					break;
 				}
-				else
-				{
-					oCount = 0;
-				}
-
 			}
-
-			//Diagonal Victory
-			if (play[0][0] == 'O' && play[1][1] == 'O' && play[2][2] == 'O')
+		
+			//Check for tie
+			if (victory == false && turn > 8)
 			{
-				victory = 'O';
-				break;
-			}
-			if (play[2][0] == 'O' && play[1][1] == 'O' && play[0][2] == 'O')
-			{
-				victory = 'O';
+				std::cout << "Tie game";
 				break;
 			}
 
-		}
+			//change Token
+			if (victory == false)
+			{
+				token = (token == 'X') ? 'O' : 'X';
+			}
 	}
+	while (victory == false);
 
-	std::cout << "The winner is: " << victory << std::endl;
+	std::cout << "The winner is: " << token << std::endl;
+	system("pause");
 
 }
