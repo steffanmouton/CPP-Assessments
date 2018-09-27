@@ -10,7 +10,7 @@ bool Stack::Push(Hero* hero)
 bool Stack::Pop()
 {
 	//Pop off the top of the target stack
-	mData[mCount--] = nullptr;
+	mData[--mCount] = nullptr;
 	return 1;
 }
 

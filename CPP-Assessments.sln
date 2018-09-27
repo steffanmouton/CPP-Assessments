@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessingGame", "Numbe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToeGame", "TicTacToeGame\TicTacToeGame.vcxproj", "{564BFA3D-E8A7-49B2-9FCF-8B952475E7E9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CivilWarSimulator", "lab00\lab00.vcxproj", "{177DBFB0-1888-42A6-9259-44B2230257E0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CivilWarSimulator", "CivilWarSimulator\lab00.vcxproj", "{177DBFB0-1888-42A6-9259-44B2230257E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

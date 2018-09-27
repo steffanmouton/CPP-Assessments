@@ -15,6 +15,16 @@ bool Hero::operator<(const Hero & rhs)
 	return (this->mHealth < rhs.mHealth);
 }
 
+
+//Operator Overloading to assign all parts of one hero to another
+Hero Hero::operator=(const Hero & rhs)
+{
+	this->mHealth = rhs.mHealth;
+	this->mPower = rhs.mPower;
+	this->mName = rhs.mName;
+	return Hero();
+}
+
 //Assigns hero HP to 100 and
 //assigns random power to each fighter between values 10 - 30
 Hero::Hero()
@@ -28,7 +38,7 @@ Hero::Hero()
 Hero::Hero(std::string Name) :Hero()
 {
 	mName = Name;
-
+	testptr = new std::string(mName.c_str());
 }
 
 //Prints current info of a hero.

@@ -10,6 +10,7 @@ private:
 	int mHealth;
 	int mPower;
 	std::string mName;
+	std::string* testptr;
 
 public:
 	//Default Constructor
@@ -28,4 +29,7 @@ public:
 	//Operator Overloading to compare hero HP values, determines winner.
 	bool operator > (const Hero& rhs);
 	bool operator < (const Hero& rhs);
+
+	//Operator Overloading to make all parts of one hero assign to another
+	Hero operator = (const Hero& rhs);
 };
