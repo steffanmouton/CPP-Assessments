@@ -70,7 +70,7 @@ int main()
 
 	//Print out the Winners and the Losers
 
-	std::cout << "\nThe Winners are:\n";
+	std::cout << "\n After all combat, \nThe Winners are:\n";
 
 	for (int i = 0; i < 5; i++)
 	{
@@ -78,11 +78,12 @@ int main()
 		Winners.Pop();
 	}
 
-	std::cout << "\nThe Losers are:\n";
+	std::cout << "\n\nThe Losers are:\n";
 
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << Losers.Top().Info();
 		Losers.Pop();
 	}
+	system("pause");
 }
