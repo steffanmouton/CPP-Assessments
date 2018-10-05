@@ -6,7 +6,7 @@ CWS.exe - The Executable to run the Simulator
 
 ## II.  Operational Instructions
 
-Double-click on the file named 'CVS.exe' to launch the program.
+Double-click on the file named 'CWS.exe' to launch the program.
 
 This is a super simple simulator and requires no input from the user. It will run, generate values for power, fight the heroes, and output Winners and Losers.
 
