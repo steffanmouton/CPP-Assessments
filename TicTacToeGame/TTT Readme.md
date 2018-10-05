@@ -1,8 +1,10 @@
-### I. File List:
+# Tac Tac Toe Game Readme
+
+## I. File List:
 
 TTTGame.exe - The Executable to run the Tic Tac Toe Game
 
-### II.  Operational Instructions
+## II.  Operational Instructions
 
 Double-click on the file named 'TTTGame.exe' to launch the program.
 
@@ -16,6 +18,6 @@ Play continues until there either a winner or a draw.
 
 The console will print out the winner or it will print 'Tie game' in the event of a tie.
 
-### III. Post-Mortem
+## III. Post-Mortem
 
 Dylan assisted with cleaning up code.
