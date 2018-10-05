@@ -38,7 +38,6 @@ Hero::Hero()
 Hero::Hero(std::string Name) :Hero()
 {
 	mName = Name;
-	testptr = new std::string(mName.c_str());
 }
 
 //Prints current info of a hero.

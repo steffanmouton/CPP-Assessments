@@ -10,7 +10,6 @@ private:
 	int mHealth;
 	int mPower;
 	std::string mName;
-	std::string* testptr;
 
 public:
 	//Default Constructor
